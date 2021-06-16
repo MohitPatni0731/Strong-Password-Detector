@@ -1,5 +1,6 @@
 import re
 import random
+
 def uppercase_check(password):
     if re.search('[A-Z]', password):
         return True

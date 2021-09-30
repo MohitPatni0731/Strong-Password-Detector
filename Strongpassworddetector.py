@@ -1,5 +1,7 @@
 import re
 import random
+from sys import argv
+from math import *
 
 def uppercase_check(password):
     if re.search('[A-Z]', password):
@@ -23,4 +25,5 @@ def user_input_password_check():
     else:
         print("Weak Password")
 
-user_input_password_check()
+print(user_input_password_check())
+return true

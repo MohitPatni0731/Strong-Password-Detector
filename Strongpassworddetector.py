@@ -18,12 +18,21 @@ def digit_check(password):
         return True
     return False
 
+
+# new patch to check if string has atleast one special characters
+def special_char_check(password):
+    if re.search('[@_!#$%^&*()<>?/\|}{~:]', password):
+        return True
+    return False
+
+
 def user_input_password_check():
     password = input("Enter password : ")
-    if len(password) >= 8 and uppercase_check(password) and lowercase_check(password) and digit_check(password):
+    if len(password) >= 8 and uppercase_check(password) and lowercase_check(password) and digit_check(password) and special_char_check(password):
         print("Strong Password")
     else:
         print("Weak Password")
+        
 
 print(user_input_password_check())
-return true
+
